@@ -1,0 +1,136 @@
+/* ======================================= */
+/* ========|| Custom Properties ||======== */
+/* ======================================= */
+:root {
+  --clr-primary: ;
+
+  --clr-secondary: ;
+
+  --clr-accent: ;
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --ff-accent: ;
+  --ff-base: ;
+}
+
+/* ======================================= */
+/* ===============|| Reset ||============= */
+/* ======================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  overflow-wrap: break-word;
+  /* max-width: 75ch; */
+  text-wrap: pretty; /*prevent alone words*/
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+/* ======================================= */
+/* ========|| General Styling ||========== */
+/* ======================================= */
+body {
+  font-family: var(--ff-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    #09121b 20%,
+    #141e30 60%,
+    #2a1b33 80%,
+    #d2489a 180%
+  );
+  height: 100vh;
+  overflow: hidden;
+  color: whitesmoke;
+}
+
+#starsBox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 50%; 
+	opacity: .5;
+  pointer-events: none;
+}
+
+#starsBox span {
+		display: inline-block; 
+		position: absolute;
+		border-radius: 100%; 
+		transition: left 500s linear, top 500s linear;
+}
+
+#light {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(
+    circle,
+    rgba(210, 72, 154, 0.8) 0%,         /* Neon pink (matches your #d2489a) */
+    rgba(255, 0, 255, 0.5) 40%,          /* Bright magenta glow */
+    rgba(138, 43, 226, 0.3) 70%,         /* Soft neon purple */
+    rgba(0, 0, 0, 0) 90%                  /* Fade out to transparent */
+  );
+
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    transition: transform 0.1s ease;
+}
+
