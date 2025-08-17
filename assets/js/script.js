@@ -43,12 +43,12 @@ setTimeout(function () {
   setInterval(moveStars, 1000000);
 }, 1000);
 
-const light = document.createElement('div');  // create the div
-light.id = 'light';                           // assign the ID
-document.body.appendChild(light);             // add to the DOM
+const light = document.createElement("div"); // create the div
+light.id = "light"; // assign the ID
+document.body.appendChild(light); // add to the DOM
 
-document.addEventListener('mousemove', (e) => {
-    // position the #light so its center is at the mouse cursor
-    light.style.left = (e.clientX - 100) + 'px';
-    light.style.top = (e.clientY - 100) + 'px';
+document.addEventListener("mousemove", (e) => {
+  // position the #light so its center is at the mouse cursor
+  light.style.left = e.clientX - 100 + "px";
+  light.style.top = e.clientY - 100 + "px";
 });
